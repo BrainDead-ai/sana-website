@@ -387,3 +387,94 @@ footer a:hover {
     font-size: 1.1rem;
   }
 }
+
+/* Styles spécifiques pour l'arabe (RTL) */
+html[lang="ar"] {
+  direction: rtl;
+  font-family: 'Montserrat', sans-serif; /* Garde la police, tu peux changer si besoin */
+}
+
+html[lang="ar"] body {
+  text-align: right;
+  color: var(--text-color);
+}
+
+html[lang="ar"] header {
+  flex-direction: row-reverse;
+}
+
+html[lang="ar"] nav {
+  text-align: right;
+}
+
+html[lang="ar"] nav a {
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+html[lang="ar"] nav a:hover::after,
+html[lang="ar"] nav a.active::after {
+  left: auto;
+  right: 0;
+}
+
+html[lang="ar"] .service-content {
+  text-align: right;
+}
+
+html[lang="ar"] #contact {
+  text-align: right;
+}
+
+html[lang="ar"] label {
+  text-align: right;
+  display: block;
+}
+
+html[lang="ar"] input,
+html[lang="ar"] textarea {
+  text-align: right;
+}
+
+html[lang="ar"] .hero {
+  text-align: right;
+}
+
+html[lang="ar"] footer {
+  text-align: center; /* Optionnel, ou right si tu préfères */
+}
+
+/* Style custom pour le select langue */
+#languageSwitcher {
+  appearance: none; /* supprime le style natif */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
+  padding: 8px 30px 8px 15px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Ajout d’une flèche personnalisée */
+#languageSwitcher {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23b76ba3' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+}
+
+#languageSwitcher:hover, #languageSwitcher:focus {
+  border-color: #933d84;
+}
+
+/* Pour que la flèche ne gêne pas le texte */
+#languageSwitcher option {
+  padding: 10px;
+}
