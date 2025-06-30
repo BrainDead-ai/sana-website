@@ -343,3 +343,47 @@ footer a:hover {
     padding: 15px 0;
   }
 }
+
+/* Hamburger menu - bouton */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.menu-toggle span {
+  height: 3px;
+  background: var(--dark-text);
+  margin: 4px 0;
+  width: 25px;
+  border-radius: 2px;
+}
+
+/* Responsive menu - pour petits écrans */
+@media (max-width: 600px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: var(--background-color);
+    position: absolute;
+    top: 70px; /* un peu en dessous du header */
+    right: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+    border-radius: 15px;
+    z-index: 999;
+  }
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav a {
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+}
