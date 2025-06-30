@@ -1,5 +1,12 @@
 // script.js
 
+// Fonction menu hamburger responsive
+function toggleMenu() {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('show');
+}
+
+// Gestion du formulaire contact
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   if (!form) return;
@@ -19,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
     if (!emailRegex.test(email)) {
       messageEl.textContent = 'Veuillez entrer une adresse email valide.';
       messageEl.className = 'message error';
