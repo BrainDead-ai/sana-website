@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,7 +13,12 @@
 </head>
 <body>
   <header>
-    <h1>Aesthetic Sana Lajnef</h1>
+    <select id="languageSwitcher" aria-label="Changer la langue">
+      <option value="fr" selected>Français</option>
+      <option value="ar">العربية</option>
+    </select>
+    
+    <h1 data-lang-fr="Aesthetic Sana Lajnef" data-lang-ar="دكتورة سناء لجنيف">Aesthetic Sana Lajnef</h1>
 
     <!-- Bouton hamburger -->
     <div class="menu-toggle" onclick="toggleMenu()">
@@ -24,37 +29,42 @@
 
     <!-- Navigation avec id pour JS -->
     <nav id="navbar">
-      <a href="index.html" class="active">Accueil</a>
-      <a href="services.html">Soins</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" class="active" data-lang-fr="Accueil" data-lang-ar="الرئيسية">Accueil</a>
+      <a href="services.html" data-lang-fr="Soins" data-lang-ar="العلاجات">Soins</a>
+      <a href="contact.html" data-lang-fr="Contact" data-lang-ar="اتصل بنا">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h2>Sublimez votre beauté naturelle</h2>
-    <p>Découvrez les soins esthétiques avancés du Dr Sana Lajnef à El Mourouj</p>
+    <h2 data-lang-fr="Sublimez votre beauté naturelle" data-lang-ar="أبرِز جمالك الطبيعي">Sublimez votre beauté naturelle</h2>
+    <p data-lang-fr="Découvrez les soins esthétiques avancés du Dr Sana Lajnef à El Mourouj"
+        data-lang-ar="اكتشف العلاجات التجميلية المتقدمة للدكتورة سناء لجنيف في المروج"
+       Découvrez les soins esthétiques avancés du Dr Sana Lajnef à El Mourouj
+    </p>
   </section>
 
   <section class="section">
-    <h2>Bienvenue</h2>
-    <p style="max-width: 700px; margin: auto; text-align: center; font-size: 1.1rem;">
+    <h2 data-lang-fr="Bienvenue" data-lang-ar="مرحبا">Bienvenue</h2>
+    <p style="max-width: 700px; margin: auto; text-align: center; font-size: 1.1rem;"
+       data-lang-fr="Notre cabinet propose des soins personnalisés, dans un cadre chaleureux et professionnel. Prenez rendez-vous pour révéler votre beauté naturelle."
+       data-lang-ar="عيادتنا تقدم علاجات مخصصة في بيئة دافئة ومهنية. احجز موعدك لاكتشاف جمالك الطبيعي.">
       Notre cabinet propose des soins personnalisés, dans un cadre chaleureux et professionnel.
       Prenez rendez-vous pour révéler votre beauté naturelle.
     </p>
   </section>
 
   <footer>
-    <p><strong>📍 Adresse :</strong> شارع افريقية 34, El Mourouj</p>
-    <p><strong>📞 Téléphone :</strong> <a href="tel:98355614">98 355 614</a></p>
-    <p><strong>Email :</strong> <a href="mailto:sana.lajnef34@gmail.com">sana.lajnef34@gmail.com</a></p>
+    <p><strong>📍 <span data-lang-fr="Adresse" data-lang-ar="العنوان">Adresse</span> :</strong> شارع افريقية 34, El Mourouj</p>
+    <p><strong>📞 <span data-lang-fr="Téléphone" data-lang-ar="الهاتف">Téléphone</span> :</strong> <a href="tel:98355614">98 355 614</a></p>
+    <p><strong><span data-lang-fr="Email" data-lang-ar="البريد الإلكتروني">Email</span> :</strong> <a href="mailto:sana.lajnef34@gmail.com">sana.lajnef34@gmail.com</a></p>
     <p>
-      <strong>Instagram :</strong>
+      <strong><span data-lang-fr="Instagram" data-lang-ar="إنستغرام">Instagram</span> :</strong>
       <a href="https://www.instagram.com/cabinet_dr_sl" target="_blank">
         <i class="fab fa-instagram"></i> @cabinet_dr_sl
       </a>
     </p>
     <p>
-      <strong>TikTok :</strong>
+      <strong><span data-lang-fr="TikTok" data-lang-ar="تيك توك">TikTok</span> :</strong>
       <a href="https://www.tiktok.com/@aesthetic.sana.la" target="_blank">
         <i class="fab fa-tiktok"></i> @aesthetic.sana.la
       </a>
