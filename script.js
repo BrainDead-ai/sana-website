@@ -11,7 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  const messageEl = document.getElementById('formMessage');
+  // Crée un élément message s'il n'existe pas
+  let messageEl = document.getElementById('formMessage');
+  if (!messageEl) {
+    messageEl = document.createElement('div');
+    messageEl.id = 'formMessage';
+    form.parentNode.insertBefore(messageEl, form.nextSibling);
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -26,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       messageEl.textContent = 'Veuillez entrer une adresse email valide.';
       messageEl.className = 'message error';
