@@ -49,3 +49,51 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1800);
   });
 });
+// Gestion du changement de langue
+document.addEventListener('DOMContentLoaded', () => {
+  const languageSwitcher = document.getElementById('languageSwitcher');
+  if (!languageSwitcher) return;
+
+  // Fonction pour changer la langue
+  function switchLanguage(lang) {
+    // Change l'attribut lang de <html>
+    document.documentElement.lang = lang;
+
+    // Change la direction du texte (ltr pour fr, rtl pour ar)
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    // Parcours tous les éléments avec data-lang-fr et data-lang-ar
+    document.querySelectorAll('[data-lang-fr]').forEach(el => {
+      if (lang === 'fr') {
+        el.textContent = el.getAttribute('data-lang-fr');
+      } else {
+        el.textContent = el.getAttribute('data-lang-ar');
+      }
+    });
+
+    // Change les placeholders des inputs et textarea
+    document.querySelectorAll('input[data-placeholder-fr]').forEach(el => {
+      if (lang === 'fr') {
+        el.placeholder = el.getAttribute('data-placeholder-fr');
+      } else {
+        el.placeholder = el.getAttribute('data-placeholder-ar');
+      }
+    });
+
+    document.querySelectorAll('textarea[data-placeholder-fr]').forEach(el => {
+      if (lang === 'fr') {
+        el.placeholder = el.getAttribute('data-placeholder-fr');
+      } else {
+        el.placeholder = el.getAttribute('data-placeholder-ar');
+      }
+    });
+  }
+
+  // Au changement du select
+  languageSwitcher.addEventListener('change', e => {
+    switchLanguage(e.target.value);
+  });
+
+  // Initialise avec la langue sélectionnée (fr par défaut)
+  switchLanguage(languageSwitcher.value);
+});
