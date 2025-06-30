@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,7 +13,12 @@
 </head>
 <body>
   <header>
-    <h1>Aesthetic Sana Lajnef</h1>
+    <select id="languageSwitcher" aria-label="Changer la langue">
+      <option value="fr" selected>Français</option>
+      <option value="ar">العربية</option>
+    </select>
+    
+    <h1 data-lang-fr="Aesthetic Sana Lajnef" data-lang-ar="دكتورة سناء لجنيف">Aesthetic Sana Lajnef</h1>
 
     <!-- Bouton hamburger -->
     <div class="menu-toggle" onclick="toggleMenu()">
@@ -23,65 +28,80 @@
     </div>
 
     <nav id="navbar">
-      <a href="index.html">Accueil</a>
-      <a href="services.html" class="active">Soins</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-lang-fr="Accueil" data-lang-ar="الرئيسية">Accueil</a>
+      <a href="services.html" class="active" data-lang-fr="Soins" data-lang-ar="العلاجات">Soins</a>
+      <a href="contact.html" data-lang-fr="Contact" data-lang-ar="اتصل بنا">Contact</a>
     </nav>
   </header>
 
   <section class="section">
-    <h2>Nos soins</h2>
+    <h2 data-lang-fr="Nos soins" data-lang-ar="خدماتنا">Nos soins</h2>
     <div class="services">
       <div class="service">
         <img src="images/mesotherapie.jfif" alt="Image mésothérapie" />
         <div class="service-content">
-          <h3>Mésothérapie</h3>
-          <p>Un soin revitalisant injecté dans la peau pour l’hydrater et révéler son éclat naturel.</p>
+          <h3 data-lang-fr="Mésothérapie" data-lang-ar="الميزوثيرابي">Mésothérapie</h3>
+          <p data-lang-fr="Un soin revitalisant injecté dans la peau pour l’hydrater et révéler son éclat naturel."
+             data-lang-ar="علاج منشط يُحقن في الجلد لترطيبه وكشف توهجه الطبيعي.">
+            Un soin revitalisant injecté dans la peau pour l’hydrater et révéler son éclat naturel.
+          </p>
         </div>
       </div>
       <div class="service">
         <img src="images/PRP.png" alt="Image PRP" />
         <div class="service-content">
-          <h3>PRP</h3>
-          <p>Un traitement naturel à base de votre propre plasma pour régénérer et tonifier la peau.</p>
+          <h3 data-lang-fr="PRP" data-lang-ar="حقن البلازما">PRP</h3>
+          <p data-lang-fr="Un traitement naturel à base de votre propre plasma pour régénérer et tonifier la peau."
+             data-lang-ar="علاج طبيعي يعتمد على بلازما دمك لتجديد وشد الجلد.">
+            Un traitement naturel à base de votre propre plasma pour régénérer et tonifier la peau.
+          </p>
         </div>
       </div>
       <div class="service">
         <img src="images/hydrafacial.jfif" alt="Image hydrafacial" />
         <div class="service-content">
-          <h3>Hydrafacial</h3>
-          <p>Un soin du visage complet qui nettoie, exfolie et hydrate pour une peau fraîche et éclatante.</p>
+          <h3 data-lang-fr="Hydrafacial" data-lang-ar="هايدرافاشيال">Hydrafacial</h3>
+          <p data-lang-fr="Un soin du visage complet qui nettoie, exfolie et hydrate pour une peau fraîche et éclatante."
+             data-lang-ar="عناية كاملة للوجه تنظف وتقشر وترطب للحصول على بشرة نضرة ومشرقة.">
+            Un soin du visage complet qui nettoie, exfolie et hydrate pour une peau fraîche et éclatante.
+          </p>
         </div>
       </div>
       <div class="service">
         <img src="images/Épilation Laser.jfif" alt="Image Épilation Laser" />
         <div class="service-content">
-          <h3>Épilation Laser</h3>
-          <p>Une solution durable pour éliminer les poils sur toutes les zones du corps, en toute sécurité.</p>
+          <h3 data-lang-fr="Épilation Laser" data-lang-ar="إزالة الشعر بالليزر">Épilation Laser</h3>
+          <p data-lang-fr="Une solution durable pour éliminer les poils sur toutes les zones du corps, en toute sécurité."
+             data-lang-ar="حل دائم لإزالة الشعر من جميع مناطق الجسم بأمان.">
+            Une solution durable pour éliminer les poils sur toutes les zones du corps, en toute sécurité.
+          </p>
         </div>
       </div>
       <div class="service">
         <img src="images/Morpheus8.jfif" alt="Image Morpheus8" />
         <div class="service-content">
-          <h3>Morpheus8</h3>
-          <p>Un soin combinant radiofréquence et microneedling pour raffermir et lisser la peau en profondeur.</p>
+          <h3 data-lang-fr="Morpheus8" data-lang-ar="مورفيوس 8">Morpheus8</h3>
+          <p data-lang-fr="Un soin combinant radiofréquence et microneedling pour raffermir et lisser la peau en profondeur."
+             data-lang-ar="علاج يجمع بين الترددات الراديوية والإبر الدقيقة لشد وتنظيف الجلد بعمق.">
+            Un soin combinant radiofréquence et microneedling pour raffermir et lisser la peau en profondeur.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <p><strong>📍 Adresse :</strong> شارع افريقية 34, El Mourouj</p>
-    <p><strong>📞 Téléphone :</strong> <a href="tel:98355614">98 355 614</a></p>
-    <p><strong>Email :</strong> <a href="mailto:sana.lajnef34@gmail.com">sana.lajnef34@gmail.com</a></p>
+    <p><strong>📍 <span data-lang-fr="Adresse" data-lang-ar="العنوان">Adresse</span> :</strong> شارع افريقية 34, El Mourouj</p>
+    <p><strong>📞 <span data-lang-fr="Téléphone" data-lang-ar="الهاتف">Téléphone</span> :</strong> <a href="tel:98355614">98 355 614</a></p>
+    <p><strong><span data-lang-fr="Email" data-lang-ar="البريد الإلكتروني">Email</span> :</strong> <a href="mailto:sana.lajnef34@gmail.com">sana.lajnef34@gmail.com</a></p>
     <p>
-      <strong>Instagram :</strong>
+      <strong><span data-lang-fr="Instagram" data-lang-ar="إنستغرام">Instagram</span> :</strong>
       <a href="https://www.instagram.com/cabinet_dr_sl" target="_blank">
        <i class="fab fa-instagram"></i> @cabinet_dr_sl
      </a>
     </p>
     <p>
-      <strong>TikTok :</strong>
+      <strong><span data-lang-fr="TikTok" data-lang-ar="تيك توك">TikTok</span> :</strong>
       <a href="https://www.tiktok.com/@aesthetic.sana.la" target="_blank">
         <i class="fab fa-tiktok"></i> @aesthetic.sana.la
       </a>
