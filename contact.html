@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aesthetic Sana Lajnef - Contact</title>
+  <title data-lang-fr="Aesthetic Sana Lajnef - Contact" data-lang-ar="عيادة سانا اللجنيف - اتصل بنا">Aesthetic Sana Lajnef - Contact</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap"
     rel="stylesheet"
@@ -13,7 +13,12 @@
 </head>
 <body>
   <header>
-    <h1>Aesthetic Sana Lajnef</h1>
+    <select id="languageSwitcher" aria-label="Changer la langue">
+      <option value="fr" selected>Français</option>
+      <option value="ar">العربية</option>
+    </select>
+
+    <h1 data-lang-fr="Aesthetic Sana Lajnef" data-lang-ar="دكتورة سناء لجنيف">Aesthetic Sana Lajnef</h1>
 
     <!-- Bouton hamburger -->
     <div class="menu-toggle" onclick="toggleMenu()">
@@ -24,40 +29,40 @@
 
     <!-- Ajout d'id pour la nav -->
     <nav id="navbar">
-      <a href="index.html">Accueil</a>
-      <a href="services.html">Soins</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="index.html" data-lang-fr="Accueil" data-lang-ar="الرئيسية">Accueil</a>
+      <a href="services.html" data-lang-fr="Soins" data-lang-ar="العلاجات">Soins</a>
+      <a href="contact.html" class="active" data-lang-fr="Contact" data-lang-ar="اتصل بنا">Contact</a>
     </nav>
   </header>
 
   <section id="contact" class="section">
-    <h2>Contactez-nous</h2>
+    <h2 data-lang-fr="Contactez-nous" data-lang-ar="اتصل بنا">Contactez-nous</h2>
     <form id="contactForm" action="https://formspree.io/f/mkgbyglj" method="POST">
-      <label for="name">Nom complet</label>
-      <input type="text" id="name" name="name" placeholder="Votre nom complet" required />
+      <label for="name" data-lang-fr="Nom complet" data-lang-ar="الاسم الكامل">Nom complet</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom complet" data-placeholder-fr="Votre nom complet" data-placeholder-ar="اسمك الكامل" required />
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Votre adresse email" required />
+      <label for="email" data-lang-fr="Email" data-lang-ar="البريد الإلكتروني">Email</label>
+      <input type="email" id="email" name="email" placeholder="Votre adresse email" data-placeholder-fr="Votre adresse email" data-placeholder-ar="بريدك الإلكتروني" required />
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+      <label for="message" data-lang-fr="Message" data-lang-ar="الرسالة">Message</label>
+      <textarea id="message" name="message" placeholder="Votre message..." data-placeholder-fr="Votre message..." data-placeholder-ar="رسالتك..." required></textarea>
 
-      <button type="submit">Envoyer</button>
+      <button type="submit" data-lang-fr="Envoyer" data-lang-ar="إرسال">Envoyer</button>
     </form>
   </section>
 
   <footer>
-    <p><strong>📍 Adresse :</strong> شارع افريقية 34, El Mourouj</p>
-    <p><strong>📞 Téléphone :</strong> <a href="tel:98355614">98 355 614</a></p>
-    <p><strong>Email :</strong> <a href="mailto:sana.lajnef34@gmail.com">sana.lajnef34@gmail.com</a></p>
+    <p><strong>📍 <span data-lang-fr="Adresse" data-lang-ar="العنوان">Adresse</span> :</strong> شارع افريقية 34, El Mourouj</p>
+    <p><strong>📞 <span data-lang-fr="Téléphone" data-lang-ar="الهاتف">Téléphone</span> :</strong> <a href="tel:98355614">98 355 614</a></p>
+    <p><strong><span data-lang-fr="Email" data-lang-ar="البريد الإلكتروني">Email</span> :</strong> <a href="mailto:sana.lajnef34@gmail.com">sana.lajnef34@gmail.com</a></p>
     <p>
-      <strong>Instagram :</strong>
+      <strong><span data-lang-fr="Instagram" data-lang-ar="إنستغرام">Instagram</span> :</strong>
       <a href="https://www.instagram.com/cabinet_dr_sl" target="_blank">
         <i class="fab fa-instagram"></i> @cabinet_dr_sl
       </a>
     </p>
     <p>
-      <strong>TikTok :</strong>
+      <strong><span data-lang-fr="TikTok" data-lang-ar="تيك توك">TikTok</span> :</strong>
       <a href="https://www.tiktok.com/@aesthetic.sana.la" target="_blank">
         <i class="fab fa-tiktok"></i> @aesthetic.sana.la
       </a>
